@@ -1,1 +1,3 @@
-# newyear
+# maven-project
+
+Simple Maven Project
