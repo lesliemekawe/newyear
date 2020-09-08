@@ -3,6 +3,9 @@ pipeline {
     tools {
         maven 'M2_HOME'
     }
+    enviroment {
+        registry = "lesliemekawe/devops-pipeline"
+        registryCredential = 'DockerRegistryID'
 
     stages {
         stage('Hello') {
@@ -20,7 +23,8 @@ pipeline {
         }
         stage('docker') {
             steps {
-                echo 'image step'
+                script {
+                    docker.build registry + ":BUILD_NUMBER"
             }
         }
     }
