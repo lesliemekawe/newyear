@@ -6,7 +6,7 @@ pipeline {
     enviroment {
         registry = "lesliemekawe/devops-pipeline"
         registryCredential = 'DockerRegistryID'
-
+    }
     stages {
         stage('Hello') {
             steps {
